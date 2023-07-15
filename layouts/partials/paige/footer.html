@@ -1,0 +1,19 @@
+{{ $page := . }}
+
+<footer class="mb-3" id="paige-footer">
+    {{ if templates.Exists "partials/paige/footer-first.html" }}
+        {{ partial "paige/footer-first.html" . }}
+    {{ end }}
+
+    {{ with site.Copyright | markdownify }}
+        <p class="mb-0 text-center text-secondary">{{ . }}</p>
+    {{ end }}
+
+    <p class="mb-0 text-center justify-content-center">
+        &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Symula Media Group, LLC
+    </p>
+
+    {{ if templates.Exists "partials/footer-last.html" }}
+        {{ partial "paige/footer-last.html" . }}
+    {{ end }}
+</footer>
