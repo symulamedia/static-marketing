@@ -43,7 +43,7 @@
 {{ $class = delimit ($class | uniq) " " }}
 
 <article {{ with $class }} class="{{ . }}" {{ end }} id="paige-article">
-    <div class="align-items-center d-flex flex-column mb-0">
+    <div class="align-items-center d-flex flex-column mb-0 {{ if .Page.Params.center }} text-center {{ end }}">
         {{ partial "paige/metadata.html" $page }}
         {{ partial "paige/alert.html" $page }}
         {{ partial "paige/toc.html" $page }}

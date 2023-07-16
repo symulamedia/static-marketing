@@ -29,7 +29,7 @@
 
 {{ with site.Menus.main }}
     <nav>
-        <ul class="align-items-center justify-content-center nav {{ if $pills }} nav-pills {{ else if $tabs }} nav-tabs {{ else if $underline }} nav-underline {{ end }}">
+        <ul class="nav {{ if $pills }} nav-pills {{ else if $tabs }} nav-tabs {{ else if $underline }} nav-underline {{ end }}">
             {{ range . }}
                 {{ $menupath := strings.TrimPrefix $basepath .URL }}
                 {{ $home := and (eq $menupath "/") (eq $pagepath "/") }}

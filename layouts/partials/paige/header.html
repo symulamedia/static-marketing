@@ -2,15 +2,15 @@
 
 {{ if or $page.Ancestors site.Menus.main }}
     <header class="my-3" id="paige-header">
-        {{ if templates.Exists "partials/paige/header-first.html" }}
-            {{ partial "paige/header-first.html" $page }}
-        {{ end }}
-
-        {{ partial "paige/menu.html" $page }}
-        {{ partial "paige/breadcrumbs.html" . }}
-
-        {{ if templates.Exists "partials/paige/header-last.html" }}
-            {{ partial "paige/header-last.html" $page }}
-        {{ end }}
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <div class="flex-item">
+                    <img src="/logo_full.svg" alt="Symula Media Group" class="header-logo align-self-start" />
+                </div>
+                <div class="flex-item">
+                    {{ partial "paige/menu.html" $page }}
+                </div>
+            </div>
+        </div>
     </header>
 {{ end }}

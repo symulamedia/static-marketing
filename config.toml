@@ -19,46 +19,46 @@ name = "About"
 url = "/about/"
 weight = 20
 
-[[languages.en.menu.main]]
-identifier = "services"
-name = "Services"
-url = "/services/"
-weight = 30
+#[[languages.en.menu.main]]
+#identifier = "services"
+#name = "Services"
+#url = "/services/"
+#weight = 30
 
-[[languages.en.menu.main]]
-identifier = "aerial"
-name = "Aerial"
-parent = "services"
-url = "/services/aerial/"
-weight = 10
+#[[languages.en.menu.main]]
+#identifier = "aerial"
+#name = "Aerial"
+#parent = "services"
+#url = "/services/aerial/"
+#weight = 10
 
 [[languages.en.menu.main]]
 identifier = "realEstate"
 name = "Real Estate"
-parent = "services"
-url = "/services/realEstate/"
-weight = 20
+#parent = "services"
+url = "/realEstate/"
+weight = 30
 
 [[languages.en.menu.main]]
 identifier = "matterport"
 name = "Matterport 3D"
-parent = "services"
-url = "/services/matterport/"
-weight = 30
-
-[[languages.en.menu.main]]
-identifier = "weddings"
-name = "Weddings"
-parent = "services"
-url = "/services/weddings/"
+#parent = "services"
+url = "/matterport/"
 weight = 40
-
-[[languages.en.menu.main]]
-identifier = "engagements"
-name = "Engagements"
-parent = "services"
-url = "/services/engagements/"
-weight = 50
+#
+#[[languages.en.menu.main]]
+#identifier = "weddings"
+#name = "Weddings"
+#parent = "services"
+#url = "/services/weddings/"
+#weight = 40
+#
+#[[languages.en.menu.main]]
+#identifier = "engagements"
+#name = "Engagements"
+#parent = "services"
+#url = "/services/engagements/"
+#weight = 50
 
 [[languages.en.menu.main]]
 identifier = "pricing"
@@ -72,20 +72,14 @@ name = "Contact"
 url = "/contact"
 weight = 50
 
-[[languages.en.menu.main]]
-identifier = "search"
-name = "Search"
-url = "/search/"
-weight = 60
-
 ##############################
 # Theme Configuration
 # see https://github.com/willfaught/paige
 ##############################
 
 [paige]
-color = "#9c3e64" # Bootstrap primary color and theme color for Safari and Windows
-math = false # Enable math typesetting
+color = "#9FB0B3" # Bootstrap primary color and theme color for Safari and Windows
+math = true # Enable math typesetting
 style = "" # CSS included at the end of the stylesheet, before style-last.css
 
 [paige.analytics]
@@ -138,12 +132,12 @@ breakpoint = "sm" # Bootstrap breakpoint at which to display all menu items
 style = "tabs" # Must be "links", "pills", "tabs", or "underline"
 
 [paige.rss]
-hide_page = false
+hide_page = true
 managing_editor = ""
 web_master = ""
 
 [paige.search]
-hide_page = false
+hide_page = true
 
 [authors.symula-media-group]
 name = "Symula Media Group"
