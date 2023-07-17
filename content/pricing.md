@@ -29,7 +29,7 @@ We offer the following add-ons. Customize your package to capture your home's be
 | Twilight Photos  | $250         |
 | Aerial Drone Photos | $150 |
 | Additional Exterior Photos | $225 |
-| Matterport Scan\* | $.15/SqFt      |
+| Matterport Scan\* | $.12/SqFt, $300 minimum      |
 | Matterport Linear Floor Plan | $69 |
 | Matterport Hosting - Additional Year | $95 |
 {{< /table >}}
