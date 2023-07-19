@@ -2,13 +2,16 @@
 layout: "paige/cloud"
 ---
 
-### Welcome to Symula Media Group!
+## Welcome to Symula Media Group!
+
 
 At Symula Media Group, LLC, we believe in the power of visual storytelling. We understand that every moment and every image has the potential to convey a powerful message, evoke emotions, and inspire others. Whether it's a wedding, a corporate event, or a creative project, our team of skilled photographers and videographers is dedicated to capturing the essence of your story.
 
 With a keen eye for detail and a passion for creativity, we strive to create captivating visual content that leaves a lasting impression. We believe that photography and videography are not just about documenting events; they are about capturing the essence, the energy, and the unique atmosphere that makes each occasion special.
 
 Our commitment to excellence extends beyond technical proficiency. We value the relationships we build with our clients and take the time to understand their vision and objectives. By working closely with you, we ensure that we capture the moments and convey the messages that align with your brand, your values, and your aspirations.
+
+{{< paige/image src="bbgolden.jpg" class="rounded-3 mb-4 mx-auto d-block" height="36rem">}}
 
 ---
 

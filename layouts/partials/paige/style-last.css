@@ -12,6 +12,7 @@
 .paige-keywords,
 .paige-reading-time,
 .paige-series,
+.paige-header-link,
 .paige-summary {
     display: none;
 }
@@ -62,4 +63,16 @@ img.header-logo {
 
 footer.footer-text {
 	min-width: 400px;
+}
+
+@media screen and (min-width: 1400px) {
+	article.paige-published#paige-article {
+		margin: auto 15em auto 15em;
+	}
+}
+
+@media (min-width: 990px) {
+	article.paige-published#paige-article {
+		margin: auto 7.5em auto 7.5em;
+	}
 }
