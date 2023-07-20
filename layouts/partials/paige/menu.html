@@ -28,35 +28,45 @@
 {{ end }}
 
 {{ with site.Menus.main }}
-    <nav>
-        <ul class="nav {{ if $pills }} nav-pills {{ else if $tabs }} nav-tabs {{ else if $underline }} nav-underline {{ end }}">
-            {{ range . }}
-                {{ $menupath := strings.TrimPrefix $basepath .URL }}
-                {{ $home := and (eq $menupath "/") (eq $pagepath "/") }}
-                {{ $menuprefix := and (ne $menupath "/") (hasPrefix $pagepath $menupath) }}
-                {{ $sectionprefix := and (ne $menupath "/") (hasPrefix $menupath (printf "/%s/" $page.Section)) }}
-                {{ $active := or $home $menuprefix $sectionprefix }}
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/logo_full.svg" alt="Symula Media Group" class="header-logo align-self-start" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse float-end" id="nav-content">
+                <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0 {{ if $pills }} nav-pills {{ else if $tabs }} nav-tabs {{ else if $underline }} nav-underline {{ end }}">
+                    {{ range . }}
+                    {{ $menupath := strings.TrimPrefix $basepath .URL }}
+                    {{ $home := and (eq $menupath "/") (eq $pagepath "/") }}
+                    {{ $menuprefix := and (ne $menupath "/") (hasPrefix $pagepath $menupath) }}
+                    {{ $sectionprefix := and (ne $menupath "/") (hasPrefix $menupath (printf "/%s/" $page.Section)) }}
+                    {{ $active := or $home $menuprefix $sectionprefix }}
 
-                <li class="nav-item {{ if .Children }} dropdown {{ end }}">
-                    <a {{ if $active }} aria-current="page" {{ end }} {{ if .Children }} aria-expanded="false" {{ end }} class="{{ if $active }} active {{ end }} {{ if .Params.paige.disabled }} disabled {{ end }} nav-link {{ if .Children }} dropdown-toggle {{ end }}" {{ if .Children }} data-bs-toggle="dropdown" {{ end }} href="{{ if .Children -}} # {{- else -}} {{ .URL | safeURL }} {{- end }}" {{ if .Children }} role="button" {{ end }}>{{ .Name }}</a>
+                        <li class="nav-item text-center {{ if .Children }} dropdown {{ end }}">
+                            <a {{ if $active }} aria-current="page" {{ end }} {{ if .Children }} aria-expanded="false" {{ end }} class="{{ if $active }} active {{ end }} {{ if .Params.paige.disabled }} disabled {{ end }} nav-link {{ if .Children }} dropdown-toggle {{ end }}" {{ if .Children }} data-bs-toggle="dropdown" {{ end }} href="{{ if .Children -}} # {{- else -}} {{ .URL | safeURL }} {{- end }}" {{ if .Children }} role="button" {{ end }}>{{ .Name }}</a>
 
-                    {{ with .Children }}
-                        <ul class="dropdown-menu">
-                            {{ range . }}
-                                <li>
-                                    <a class="{{ if .Params.paige.disabled }} disabled {{ end }} dropdown-item" href="{{ .URL | safeURL }}">{{ .Name }}</a>
-                                </li>
-
-                                {{ if .Params.paige.divider_below }}
+                            {{ with .Children }}
+                                <ul class="dropdown-menu">
+                                    {{ range . }}
                                     <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                {{ end }}
+                                            <a class="{{ if .Params.paige.disabled }} disabled {{ end }} dropdown-item" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+                                        </li>
+
+                                        {{ if .Params.paige.divider_below }}
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        {{ end }}
+                                    {{ end }}
+                                </ul>
                             {{ end }}
-                        </ul>
+                        </li>
                     {{ end }}
-                </li>
-            {{ end }}
-        </ul>
+                </ul>
+            </div>
+        </div>
     </nav>
 {{ end }}
