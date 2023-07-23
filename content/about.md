@@ -1,5 +1,4 @@
 ---
-layout: "paige/cloud"
 ---
 
 ### About Jenn
@@ -8,7 +7,7 @@ Meet Jenn, a passionate photographer with an unwavering love for capturing the e
 
 When Jenn isn't behind the camera, she can be found indulging in her other interests. An avid reader and writer, she immerses herself in the world of literature via her Kindle so that she can be on the go with a good read. She also thrives on the exhilaration of a vigorous cycling session on her Peloton, embracing the opportunity to challenge herself physically and mentally.
 
-{{< paige/image src="jenn.jpg" class="rounded-3 mb-4 mx-auto d-block img-fluid mw-100" maxheight="30rem" >}}
+{{< image src="jenn.jpg" class="rounded-3 mb-4 mx-auto d-block img-fluid mw-100" maxheight="30rem" >}}
 
 
 Above all, Jenn cherishes quality time with her loved ones. Her family holds a special place in her heart, with her partner, Andrew, and their cherished dog-son, Finn, adding warmth and joy to their lives. Whether it's exploring the northeastern coasts or hiking the White Mountains in New Hampshire, or simply sharing quiet moments at their home in the South End, their bond is a constant source of happiness and support.
@@ -27,7 +26,7 @@ Choose Symula Media Group for your real estate photography needs, and let Jenn's
 
 Michael Symula is an Environmental Scientist by degree, an entrepreneur and a genuine outdoorsman with a love for the natural world, his family and close friends.  Mr. Symula is a loving husband and father and takes pride in being able to live with a healthy work/life balance. 
 
-{{< paige/image src="michael.jpg" class="rounded-3 mb-4 mx-auto d-block img-fluid mw-100" maxheight="20rem" >}}
+{{< image src="michael.jpg" class="rounded-3 mb-4 mx-auto d-block img-fluid mw-100" maxheight="20rem" >}}
 
 After beginning his career working in the environmental consulting industry and travelling all over the country for large EPA / government contracts as well as private sector clients from 2013 to 2018, Mr. Symula founded MGS Environmental Services, Inc. (MGS) in early 2019. MGS is an environmental consulting firm providing leadership, project management, and technical in-field support.  Since its inception, MGS has experienced steady growth with a number of clients in both the private and government sectors.  MGS has conducted over 5 million dollars in revenue since its inception.  MGS brings Mr. Symula and his family all over the country and abroad as he has worked in the Bahamas, Florida, Texas, Louisiana, Puerto&nbsp;Rico and the Carolinas.
 

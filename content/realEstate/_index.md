@@ -2,7 +2,7 @@
 title: "Real Estate Photography"
 ---
 
-{{< paige/gallery 
+{{< gallery 
 	linked="2000x"
 	height="14rem"
 	images="*.jpg"

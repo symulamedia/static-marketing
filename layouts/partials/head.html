@@ -8,15 +8,23 @@
     <meta name="theme-color" content="#1A94D2" />
 
     {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
-
-    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+	
+	{{/* Load Bootstrap SCSS. */}}
+	{{ $options := dict "enableSourceMap" true }}
+	{{ if hugo.IsProduction}}
+	{{ $options := dict "enableSourceMap" false "outputStyle" "compressed" }}
+	{{ end }}
+	{{ $styles := resources.Get "scss/styles.scss" }}
+	{{ $styles = $styles | resources.ToCSS $options }}
+	{{ if hugo.IsProduction }}
+	{{ $styles = $styles | fingerprint }}
+	{{ end }}
+	<link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
  
     <!-- 
         include a favicon for your site if you have it, else omit the line below 
         Location of favicon can be in mytheme/static/favicon.ico
     -->
-    <link rel='shortcut icon' type='image/svg' href='/favicon.svg' />
-
+    <link rel='shortcut icon' type='image/svg+xml' href='/favicon.svg' />
 
 </head>

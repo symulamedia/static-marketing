@@ -1,5 +1,4 @@
 ---
-layout: "paige/cloud"
 ---
 
 ## Welcome to Symula Media Group!
@@ -11,7 +10,7 @@ With a keen eye for detail and a passion for creativity, we strive to create cap
 
 Our commitment to excellence extends beyond technical proficiency. We value the relationships we build with our clients and take the time to understand their vision and objectives. By working closely with you, we ensure that we capture the moments and convey the messages that align with your brand, your values, and your aspirations.
 
-{{< paige/image src="bbgolden.jpg" class="rounded-3 mb-4 mx-auto d-block mw-100 img-fluid" maxheight="36rem" >}}
+{{< image src="bbgolden.jpg" class="rounded-3 mb-4 mx-auto d-block mw-100 img-fluid" maxheight="36rem" >}}
 
 ---
 

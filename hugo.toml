@@ -1,0 +1,8 @@
+baseURL = 'https://symulamedia.com/'
+languageCode = 'en-us'
+title = 'Symula Media Group'
+
+
+[module]
+[[module.imports]]
+path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
