@@ -1,7 +1,0 @@
-{{ $page := . }}
-
-{{ if or $page.Ancestors site.Menus.main }}
-    <header class="my-3" id="paige-header">
-        {{ partial "paige/menu.html" $page }}
-    </header>
-{{ end }}
