@@ -10,4 +10,4 @@ title: "Real Estate Photography"
 	align="center"
 	class="rounded-2"
 	loading="lazy"
-	fetchpriority="high" />}}
+	fetchpriority="high" >}}

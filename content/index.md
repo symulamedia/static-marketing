@@ -1,4 +1,5 @@
 ---
+title: "Home"
 ---
 
 ## Welcome to Symula Media Group!
