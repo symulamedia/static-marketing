@@ -1,0 +1,21 @@
+{{ $params := . }}
+
+{{ $alt := $params.alt }}
+{{ $class := $params.class }}
+{{ $fetchpriority := $params.fetchpriority }}
+{{ $height := $params.intrinsicheight }}
+{{ $loading := $params.loading }}
+{{ $sizes := $params.sizes }}
+{{ $src := $params.src }}
+{{ $srcset := $params.srcset }}
+{{ $style := $params.style }}
+{{ $title := $params.title }}
+{{ $width := $params.intrinsicwidth }}
+
+<a href="{{ $src }}"
+	data-pswp-width="{{ $width }}"
+	data-pswp-height="{{ $height }}"
+	data-pswp-srcset="{{ $src }}"
+	target="_blank">
+	<img class="m-3 img-fluid w-25 h-25" src="{{ $src }}" alt="" />
+</a>

@@ -8,6 +8,8 @@
     <link href="{{ (resources.Get `site.webmanifest` | resources.ExecuteAsTemplate `site.webmanifest` .).RelPermalink | safeURL }}" rel="manifest">
 {{ end }}
 
+{{ partial "paige/link.html" (dict "href" "css/photoswipe.css" "page" $page) }}
+
 {{ partial "paige/link.html" (dict "href" "css/paige/bootstrap/paige.scss" "page" $page "sass" true "template" true) }}
 {{ partial "paige/link.html" (dict "href" "css/paige/bootstrap-icons/bootstrap-icons.css" "page" $page) }}
 

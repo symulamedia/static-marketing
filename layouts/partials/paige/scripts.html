@@ -28,6 +28,20 @@ function paigeResize() {
 paigeResize();
 addEventListener("resize", paigeResize);
 </script>
+
+<script type="module">
+    import PhotoSwipeLightbox from '/js/photoswipe/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '.photoswipe-gallery',
+        children: 'a',
+        initialZoomLevel: (zoomLevelObject) => {
+            return zoomLevelObject.fit;
+        },
+        pswpModule: () => import('/js/photoswipe/photoswipe.esm.js')
+    });
+    lightbox.init();
+</script>
+
 {{ partial "paige/script.html" (dict "page" $page "src" "js/paige/bootstrap/bootstrap.bundle.js") }}
 
 {{ if $page.Param "paige.math" }}

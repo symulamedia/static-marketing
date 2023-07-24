@@ -2,10 +2,10 @@
 title: "Real Estate Photography"
 ---
 
-{{< paige/gallery 
+{{< photoswipe-gallery
 	linked="2000x"
 	height="14rem"
-	images="*.jpg"
+	images="images/example1/*.jpg"
 	type="filled-rows"
 	align="center"
 	class="rounded-2"
