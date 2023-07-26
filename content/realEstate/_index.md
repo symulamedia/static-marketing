@@ -1,6 +1,15 @@
 ---
 title: "Real Estate Photography"
+paige:
+  style: |
+    hr {
+      border-top: 3px solid
+    }
 ---
+
+***
+
+###### Sudbury, MA
 
 {{< paige/gallery 
 	linked="fit 1800x1200 center lanczos picture webp"
@@ -12,6 +21,10 @@ title: "Real Estate Photography"
 	loading="lazy"
 	fetchpriority="high" 
 	process="fit 800x500 center lanczos picture webp" />}}
+
+------
+
+###### Harvard, MA
 
 {{< paige/gallery 
 	linked="fit 1800x1200 center lanczos picture webp"
