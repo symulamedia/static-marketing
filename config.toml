@@ -2,6 +2,7 @@ baseURL = "https://symulamedia.com"
 languageCode = "en-us"
 title = "Symula Media Group"
 theme = "github.com/willfaught/paige"
+timeout = "120s"
 
 [[module.imports]]
 path = "github.com/willfaught/paige"
