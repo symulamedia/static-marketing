@@ -48,6 +48,11 @@ body {
 	color: #9fb0b3;
 }
 
+button.navbar-toggle {
+	color: #323954;
+	background-color: #9fb0b3;
+}
+
 .footer-skyline {
 	bottom: 0px;
 	margin: 0px;
