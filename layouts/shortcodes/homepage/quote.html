@@ -1,0 +1,35 @@
+<div class="row my-4 g-0 shadow-lg">
+	<div class="col-12 col-md-6 p-4 bg-light-subtle">
+		<p class="display-6">
+			Our commitment to excellence extends beyond technical proficiency.
+		</p>
+		<hr class="border border-primary border-2 opacity-50 w-25" />
+		<p class="h3">
+			We value the relationships we build with our clients and take time to understand your vision and objectives.
+		</p>
+	</div>
+	<div class="col-12 col-md-6 d-flex">
+		{{- with resources.GetMatch "images/homepage/quote-1.jpg" }}
+			{{ with .Fill "600x600 left crop webp"}}
+				<img class="img-fluid flex-fill" src="{{ .RelPermalink }}" />
+			{{- end }}
+		{{ end }}
+	</div>
+	<div class="col-12 col-md-6 d-flex">
+		{{- with resources.GetMatch "images/homepage/quote-2.jpg" }}
+			{{ with .Fill "600x600 center crop webp"}}
+				<img class="img-fluid flex-fill" src="{{ .RelPermalink }}" />
+			{{- end }}
+		{{ end }}
+	</div>
+	<div class="col-12 col-md-6 p-4 bg-light-subtle">
+		<p class="display-6">
+			We believe that every image and every video has a unique story to tell.
+		</p>
+		<hr class="border border-primary border-2 opacity-50 w-25" />
+		<p class="h3">
+			Our team is committed to harnessing the power of visual media to evoke emotions, inspire action, and leave a lasting impact.
+			We approach each project with meticulous attention to detail, ensuring that every frame, every shot, and every edit is a true reflection of your vision.
+		</p>
+	</div>
+</div>

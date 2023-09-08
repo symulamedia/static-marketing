@@ -1,0 +1,5 @@
+{{ $file := .Get "file" }}
+{{ $image := resources.GetMatch $file }}
+{{ $image = $image.Fill "400x400 top webp circle"}}
+
+<img src="{{ $image.RelPermalink }}" class="img-fluid rounded-circle" />

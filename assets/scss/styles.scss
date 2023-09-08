@@ -11,12 +11,12 @@ $light: #9fc7c9;
 $dark: #515456;
 
 $navbar-light-color: $light;
-$navbar-light-active-color: tint-color($light, 25%);
+$navbar-light-active-color: $secondary;
 $navbar-light-hover-color: shade-color($light, 25%);
-$nav-pills-link-active-color: shade-color($primary, 25%);
-$nav-pills-link-active-bg: shade-color($light, 25%);
+$nav-pills-link-active-color: $dark;
+$nav-pills-link-active-bg: $light;
 
-
+$enable-shadows: true;
 
 @import "bootstrap/bootstrap";
 // 8. Add additional custom code here
