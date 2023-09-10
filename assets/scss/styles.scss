@@ -1,2 +1,42 @@
+@import "bootstrap/functions";
+
+$enable-dark-mode: false;
+// Customize color palette
+$primary: #207178;
+$secondary: #174c4f;
+$success: shade-color(#206840, 25%);
+$warning: shade-color(#fcd54a, 25%);
+$error: shade-color(#f58b64, 25%);
+$light: #9fc7c9;
+$dark: #515456;
+
+$navbar-light-color: $light;
+$navbar-light-active-color: tint-color($light, 25%);
+$navbar-light-hover-color: shade-color($light, 25%);
+$nav-pills-link-active-color: shade-color($primary, 25%);
+$nav-pills-link-active-bg: shade-color($light, 25%);
+
+
+
 @import "bootstrap/bootstrap";
+// 8. Add additional custom code here
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
 @import "styles.css"
+

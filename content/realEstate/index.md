@@ -11,7 +11,7 @@ paige:
 
 ###### Sudbury, MA
 
-{{< paige/gallery 
+{{< gallery 
 	linked="fit 1800x1200 center lanczos picture webp"
 	height="12rem"
 	images="/images/_1/*.jpg"
@@ -26,7 +26,7 @@ paige:
 
 ###### Harvard, MA
 
-{{< paige/gallery 
+{{< gallery 
 	linked="fit 1800x1200 center lanczos picture webp"
 	height="12rem"
 	images="/images/_2/*.jpg"
@@ -41,7 +41,7 @@ paige:
 
 ###### Brighton, MA
 
-{{< paige/gallery 
+{{< gallery 
 	linked="fit 1800x1200 center lanczos picture webp"
 	height="12rem"
 	images="/images/_3/*.jpg"

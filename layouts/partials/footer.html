@@ -1,19 +1,7 @@
-<footer class="footer fixed-bottom bg-dark">
-
-    <div class="row footer-text">
-      <div class="col-12 col-md text-center text-md-left nav-link text-white">© My Organisation - 2020 All rights reserved.</div>
-    </div>
-
-  	<!-- JavaScript and dependencies -->
-
-	{{/* Load Bootstrap JS. */}}
-	{{ $js := resources.Get "js/index.js" }}
-	{{ $params := dict }}
-	{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
-	{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
-	{{ $js = $js | js.Build $opts }}
-	{{ if hugo.IsProduction }}
-	{{ $js = $js | fingerprint }}
-	{{ end }}  
-	<script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
+<footer class="footer fixed-bottom text-bg-dark">
+	<div class="row footer-text">
+		<div class="col-12 col-md text-center text-md-left nav-link">
+			&copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Symula Media Group.
+		</div>
+	</div>
 </footer>

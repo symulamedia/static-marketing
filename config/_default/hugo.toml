@@ -1,7 +1,7 @@
 baseURL = 'https://symulamedia.com/'
 languageCode = 'en-us'
 title = 'Symula Media Group'
-
+timeout = '300s'
 
 [module]
 [[module.imports]]

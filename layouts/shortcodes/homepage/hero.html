@@ -1,0 +1,27 @@
+{{ $image_path := .Get "image" }}
+{{ $image := resources.Get $image_path }}
+{{ $image = $image.Resize "2000x webp photo q100" }}
+
+<!-- Hero -->
+<div class="container-fluid px-0">
+	<div class="row text-center mx-0" style="
+		background-image: url('{{ $image.Permalink }}');
+		background-position: center;
+		background-size: cover;
+		height: 60rem;
+		width: 100%;
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+		">
+		<div class="col-12 text-center text-white" style="background-color: rgba(0, 0, 0, 0.44);">
+			<div class="d-flex justify-content-center align-items-center h-100">
+				<div class="text-white">
+					<p class="mb-3 display-2 text-uppercase">Welcome To</p>
+					<p class="mb-3 display-1 text-uppercase"><strong>Symula Media Group</strong></p>
+					<a class="btn btn-outline-primary text-light outline-5 btn-lg my-4" href="/portfolio" role="button">View Portfolio</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hero -->

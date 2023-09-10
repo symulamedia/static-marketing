@@ -1,0 +1,12 @@
+
+<div class="carousel slide">
+	<div class="carousel-inner">
+		{{- with $.Page.Resources.Match "images/homepage/*.jpg" }}
+		{{- range . }}
+			<div class="carousel-item">
+				<img src="{{ .Permalink }}" />
+			</div>
+		{{ end -}}
+		{{ end -}}
+	</div>
+</div>
