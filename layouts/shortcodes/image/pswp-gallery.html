@@ -1,0 +1,18 @@
+{{ $path := .Get "path" }}
+{{ $resources := resources.Match $path }}
+{{ $thumbSize := .Get "thumbSize" }}
+{{ $imageSize := .Get "imageSize" }}
+
+<div class="row my-4">
+	<div class="pswp-gallery gallery--real-estate simple-gallery">
+		{{ range $resources }}
+			{{ $thumb := .Resize (printf "%sx webp photo" $thumbSize) }}
+			{{ $image := .Resize (printf "%sx webp photo" $imageSize) }}
+			<a data-pswp-src="{{ $image.RelPermalink }}" 
+				data-pswp-width="{{ $image.Width }}" 
+				data-pswp-height="{{ $image.Height }}" >
+				<img class="img-fluid" src="{{ $thumb.RelPermalink }}" alt="" />
+			</a>
+		{{ end }}
+	</div>
+</div>

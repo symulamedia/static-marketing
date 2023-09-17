@@ -1,0 +1,68 @@
+@import "bootstrap/functions";
+
+$enable-dark-mode: false;
+// Customize color palette
+$primary: #207178;
+$secondary: #174c4f;
+$success: shade-color(#206840, 25%);
+$warning: shade-color(#fcd54a, 25%);
+$error: shade-color(#f58b64, 25%);
+$light: #9fc7c9;
+$dark: #515456;
+
+$navbar-light-color: $light;
+$navbar-light-active-color: $secondary;
+$navbar-light-hover-color: shade-color($light, 25%);
+$nav-pills-link-active-color: $dark;
+$nav-pills-link-active-bg: $light;
+
+$enable-shadows: true;
+
+.pswp--custom-icon-colors {
+  --pswp-icon-color: var(--bs-primary);
+  --pswp-icon-color-secondary: var(--bs-secondary);
+}
+
+.simple-gallery {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+.simple-gallery img {
+ /* Just in case there are inline attributes */
+ width: 100% !important;
+ height: auto !important;
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+@import "bootstrap/bootstrap";
+// 8. Add additional custom code here
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+@import "styles.css";
+@import "photoswipe/dist/photoswipe";
+

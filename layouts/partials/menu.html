@@ -1,0 +1,36 @@
+{{- $page := .page -}}
+{{- $ := .}}
+{{- with index site.Menus "main" }}
+	<nav class="navbar nav-pills fixed-top navbar-expand-lg bg-primary">
+		<div class="container">
+			<a class="navbar-brand d-flex me-auto" href="{{ site.BaseURL }}">
+				<img src="{{ site.Params.nav.logo.src | safeHTML }}" height="{{ site.Params.nav.logo.height }}" alt="{{ site.Title }}"/>
+			</a>
+			<button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<ul class="collapse navbar-collapse navbar-nav nav-pills ms-auto mb-2 mb-lg-0 w-100 justify-content-end" id="navbar-content">
+				{{- partial "inline/menu/walk.html" (dict "menuEntries" . "page" $page) }}
+			</ul>
+		</div>
+	</nav>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+	{{- $current := .page }}
+	{{- range .menuEntries }}
+		{{- $attrs := (dict "href" .URL "class" "nav-link px-4") }}
+		{{- if eq .URL $current.RelPermalink }}
+			{{- $attrs = merge $attrs (dict "class" "nav-link active px-4" "aria-current" "page") }}
+		{{- end }}
+		<li class="nav-item">
+		<a
+			{{- range $k, $v := $attrs }}
+			{{- with $v }}
+				{{- printf " %s=%q" $k $v | safeHTMLAttr }}
+			{{- end }}
+			{{- end -}}
+		>{{ or (T .Identifier) .Name | safeHTML }}</a>
+		</li>
+	{{- end }}
+{{- end }}

@@ -1,5 +1,5 @@
-module github.com/symulamedia/static-marketing
+module symulamedia/static-marketing
 
 go 1.20
 
-require github.com/willfaught/paige v0.64.0 // indirect
+require github.com/gohugoio/hugo-mod-bootstrap-scss/v5 v5.20300.20003 // indirect
