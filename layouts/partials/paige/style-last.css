@@ -1,0 +1,87 @@
+#paige-authors,
+#paige-collections,
+#paige-keywords,
+#paige-reading-time,
+#paige-series,
+#paige-toc,
+#paige-breakcrumbs,
+#paige-reading-time,
+#paige-pages,
+.paige-authors,
+.paige-date,
+.paige-keywords,
+.paige-reading-time,
+.paige-series,
+.paige-header-link,
+.paige-summary {
+    display: none;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin-bottom: 60px; /* Margin bottom by footer height */
+}
+footer#paige-footer {
+	display: flex;
+	bottom: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	width: 100%;
+	line-height: 60px;
+}
+
+li.nav-item a.nav-link {
+	border-radius: 0px; /* make nav menu items look less like buttons */
+	color:#9fb0b3;
+}
+
+li.nav-item a.nav-link.active {
+	color: #323954;
+	background-color: #9fb0b3;
+}
+
+body {
+	background-color: #323954;
+	color: #9fb0b3;
+}
+
+button.navbar-toggler {
+	color: #323954;
+	background-color: #9fb0b3;
+}
+
+.footer-skyline {
+	bottom: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 400px;
+	max-width: 35%;
+	max-height: 550px;
+}
+
+img.header-logo {
+	width: 200px;
+}
+
+footer.footer-text {
+	min-width: 400px;
+}
+
+@media screen and (min-width: 1400px) {
+	article.paige-published#paige-article {
+		margin: auto 15em auto 15em;
+	}
+}
+
+@media (min-width: 990px) {
+	article.paige-published#paige-article {
+		margin: auto 7.5em auto 7.5em;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
