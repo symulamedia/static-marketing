@@ -4,7 +4,7 @@
 {{ $imageSize := .Get "imageSize" }}
 
 <div class="row my-4">
-	<div class="pswp-gallery gallery--real-estate">
+	<div class="pswp-gallery gallery--real-estate simple-gallery">
 		{{ range $resources }}
 			{{ $thumb := .Resize (printf "%sx webp photo" $thumbSize) }}
 			{{ $image := .Resize (printf "%sx webp photo" $imageSize) }}
