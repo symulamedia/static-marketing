@@ -1,0 +1,5 @@
+{{  with resources.GetMatch (.Get "path") }}
+	{{ with .Resize (printf "%sx webp photo" (default "1200" ($.Get "width"))) }}
+		<img class="img-fluid {{ $.Get "class" }}" src="{{ .RelPermalink }}" />
+	{{ end }}
+{{ end }}

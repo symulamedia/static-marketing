@@ -1,5 +1,0 @@
----
-title: "Aerial"
-draft: true
----
-

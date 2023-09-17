@@ -1,0 +1,9 @@
+{{ define "title" }}
+  <!-- This will override the default value set in baseof.html; i.e., "{{ .Site.Title }}" in the original example-->
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <div id="content" class="container m-auto px-2 py-4">
+    {{ .Content }}
+  </div>
+{{ end }}

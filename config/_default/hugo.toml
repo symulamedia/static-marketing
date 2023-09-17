@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Symula Media Group'
 timeout = '300s'
 
+[permalinks]
+	[permalinks.page]
+		posts = '/:filename/'
+
+
 [module]
 [[module.imports]]
 path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"

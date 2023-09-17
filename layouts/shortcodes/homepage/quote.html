@@ -1,4 +1,4 @@
-<div class="row my-4 g-0 shadow-lg">
+<div class="row my-4 g-0 shadow-lg mx-4 d-flex flex-wrap">
 	<div class="col-12 col-md-6 p-4 bg-light-subtle">
 		<p class="display-6">
 			Our commitment to excellence extends beyond technical proficiency.
@@ -8,21 +8,21 @@
 			We value the relationships we build with our clients and take time to understand your vision and objectives.
 		</p>
 	</div>
-	<div class="col-12 col-md-6 d-flex">
+	<div class="col-12 col-md-6 d-flex mw-100">
 		{{- with resources.GetMatch "images/homepage/quote-1.jpg" }}
 			{{ with .Fill "600x600 left crop webp"}}
 				<img class="img-fluid flex-fill" src="{{ .RelPermalink }}" />
 			{{- end }}
 		{{ end }}
 	</div>
-	<div class="col-12 col-md-6 d-flex">
+	<div class="col-12 col-md-6 d-flex order-last order-md-3 mw-100">
 		{{- with resources.GetMatch "images/homepage/quote-2.jpg" }}
 			{{ with .Fill "600x600 center crop webp"}}
 				<img class="img-fluid flex-fill" src="{{ .RelPermalink }}" />
 			{{- end }}
 		{{ end }}
 	</div>
-	<div class="col-12 col-md-6 p-4 bg-light-subtle">
+	<div class="col-12 col-md-6 p-4 bg-light-subtle order-4">
 		<p class="display-6">
 			We believe that every image and every video has a unique story to tell.
 		</p>

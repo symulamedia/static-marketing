@@ -18,6 +18,13 @@ $nav-pills-link-active-bg: $light;
 
 $enable-shadows: true;
 
+.pswp--custom-icon-colors {
+  --pswp-icon-color: var(--bs-primary);
+  --pswp-icon-color-secondary: var(--bs-secondary);
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
 @import "bootstrap/bootstrap";
 // 8. Add additional custom code here
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
@@ -38,5 +45,6 @@ $utilities: map-merge(
     ),
   )
 );
-@import "styles.css"
+@import "styles.css";
+@import "photoswipe/dist/photoswipe";
 

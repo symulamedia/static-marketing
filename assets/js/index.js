@@ -11,17 +11,35 @@ import Tab from 'js/bootstrap/src/tab'
 import Toast from 'js/bootstrap/src/toast'
 import Tooltip from 'js/bootstrap/src/tooltip'
 
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+const lightbox = new PhotoSwipeLightbox({
+	gallery: '.gallery--real-estate',
+	children: 'a',
+	showHideAnimationType: 'fade',
+	zoom: false,
+	doubleTapAction: false,
+	bgOpacity: 0.5,
+	spacing: 0.4,
+	loop: true,
+	indexIndicatorSep: " of ",
+	mainClass: 'text-bg-primary',
+	pswpModule: () => import('photoswipe')
+});
+lightbox.init();
+
+
 export default {
-  Alert,
-  Button,
-  Carousel,
-  Collapse,
-  Dropdown,
-  Modal,
-  Offcanvas,
-  Popover,
-  ScrollSpy,
-  Tab,
-  Toast,
-  Tooltip
+	Alert,
+	Button,
+	Carousel,
+	Collapse,
+	Dropdown,
+	Modal,
+	Offcanvas,
+	Popover,
+	ScrollSpy,
+	Tab,
+	Toast,
+	Tooltip
 }
