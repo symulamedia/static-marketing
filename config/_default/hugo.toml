@@ -1,7 +1,7 @@
 baseURL = 'https://symulamedia.com/'
 languageCode = 'en-us'
 title = 'Symula Media Group'
-timeout = '300s'
+timeout = '600s'
 
 [permalinks]
 	[permalinks.page]

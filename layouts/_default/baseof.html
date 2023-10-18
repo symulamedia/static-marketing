@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    {{- partial "header.html" . -}}
-    <body style="padding-top: 75px;">
+    <body style="padding-top: 75px; margin-bottom: 150px;">
+        {{- partial "header.html" . -}}
         {{- block "main" . }}{{- end }}
         {{- partial "footer.html" . -}}
     </body>

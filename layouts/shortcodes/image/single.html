@@ -1,5 +1,8 @@
-{{  with resources.GetMatch (.Get "path") }}
-	{{ with .Resize (printf "%sx webp photo" (default "1200" ($.Get "width"))) }}
-		<img class="img-fluid {{ $.Get "class" }}" src="{{ .RelPermalink }}" />
-	{{ end }}
+{{ $file := .Get "path" }}
+{{ $image := resources.GetMatch $file }}
+{{ if .Get "fill" }}
+{{ $image = $image.Fill (default "600x600 center webp photo" (.Get "img_processing")) }}
+{{ else }}
+{{ $image = $image.Resize (default "600x center webp photo" (.Get "img_processing")) }}
 {{ end }}
+<img src="{{ $image.RelPermalink }}" class="img-fluid {{ .Get "class" }}" alt="Symula Media Group marketing photo"/>
