@@ -6,8 +6,8 @@
 <div class="row my-4">
 	<div class="pswp-gallery gallery--real-estate simple-gallery">
 		{{ range $resources }}
-			{{ $thumb := .Resize (printf "%sx webp photo" $thumbSize) }}
-			{{ $image := .Resize (printf "%sx webp photo" $imageSize) }}
+			{{ $thumb := .Resize (printf "%sx webp q100 photo" $thumbSize) }}
+			{{ $image := .Resize (printf "%sx webp q100 photo" $imageSize) }}
 			<a data-pswp-src="{{ $image.RelPermalink }}" 
 				data-pswp-width="{{ $image.Width }}" 
 				data-pswp-height="{{ $image.Height }}" >
