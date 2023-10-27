@@ -12,6 +12,7 @@ bin-release/
 
 # Other files and folders
 .settings/
+jsconfig.json
 
 # lock
 *.lock
