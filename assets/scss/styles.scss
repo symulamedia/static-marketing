@@ -41,9 +41,17 @@ $enable-shadows: true;
  height: auto !important;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,400;1,100&family=Lobster&family=Montserrat:wght@500&display=swap');
+$font-family-base: 'Montserrat', sans-serif; //, "Bebas Neue";
+$headings-font-family: 'Josefin Sans', sans-serif;
+p.lead {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 @import "bootstrap/bootstrap";
+
 // 8. Add additional custom code here
 $all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
 
@@ -71,6 +79,10 @@ $utilities: map-merge(
 }
 .imgswitch:hover .picture2{
   display: block;
+}
+
+table.text-primary th, table.text-primary td {
+  color: $primary;
 }
 
 /* Sticky footer styles
