@@ -14,9 +14,9 @@
 	url = "/portfolio/"
 	weight = 3
 [[main]]
-	identifier = "pricing"
-	name = "Pricing"
-	url = "/pricing/"
+	identifier = "investment"
+	name = "Investment"
+	url = "/investment/"
 	weight = 4
 [[main]]
 	identifier = "contact"
