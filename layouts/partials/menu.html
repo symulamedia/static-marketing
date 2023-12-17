@@ -21,7 +21,7 @@
 	{{- range .menuEntries }}
 		{{- $attrs := (dict "href" .URL "class" "nav-link px-4") }}
 		{{- if eq .URL $current.RelPermalink }}
-			{{- $attrs = merge $attrs (dict "class" "nav-link px-4 text-decoration-underline" "aria-current" "page") }}
+			{{- $attrs = merge $attrs (dict "class" "nav-link px-4" "aria-current" "page") }}
 		{{- end }}
 		<li class="nav-item h3">
 		<a

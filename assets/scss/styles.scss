@@ -81,6 +81,55 @@ $utilities: map-merge(
   display: block;
 }
 
+.fancy-border {
+  font-size: 1.6rem;
+	place-items: center;
+	min-height: 200px;
+	border: 8px solid;
+	padding: 1rem;
+}
+
+.gradient-border {
+	border-image: linear-gradient(45deg, $primary, goldenrod) 1;
+}
+
+.gradient-border-horizontal {
+	border-image: linear-gradient(to left, $primary, goldenrod) 1 0;
+}
+.gradient-border-vertical {
+	border-image: linear-gradient(to bottom, $primary, goldenrod) 0 1;
+}
+
+.pseudo-partial-border {
+  position: relative;
+  padding: 7px;
+  margin: 25px;
+  border: none;
+  text-align: center;
+}
+
+.pseudo-partial-border::before,
+.pseudo-partial-border::after {
+  position: absolute;
+  width: 33px;
+  height: 20px;
+  content: "";
+}
+
+.pseudo-partial-border::before {
+  left: 0;
+  top: 0;
+  border-left: 8px solid;
+  border-top: 8px solid;
+ }
+
+.pseudo-partial-border::after {
+  right: 0;
+  bottom: 0;
+  border-right: 8px solid;
+  border-bottom: 8px solid;
+ }
+
 table.text-primary th, table.text-primary td {
   color: $primary;
 }
