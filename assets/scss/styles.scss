@@ -3,10 +3,15 @@
 $enable-dark-mode: false;
 // Customize color palette
 $primary: #207178;
-$secondary: #174c4f;
-$success: shade-color(#206840, 25%);
-$warning: shade-color(#fcd54a, 25%);
-$error: shade-color(#f58b64, 25%);
+$secondary: rgb(23, 76, 79);
+$secondary-1: rgb(98,99,100);
+$secondary-2: rgb(71,190,207);
+$secondary-3: rgb(0,67,143);
+$secondary-4: rgb(245,139,100);
+$secondary-5: rgb(252,214,74);
+$success: shade-color(rgb(32, 104, 64), 25%);
+$warning: shade-color($secondary-5, 25%);
+$error: shade-color($secondary-4, 25%);
 $light: #9fc7c9;
 $dark: #515456;
 
@@ -80,6 +85,59 @@ $utilities: map-merge(
 .imgswitch:hover .picture2{
   display: block;
 }
+
+.fancy-border {
+  font-size: 1.6rem;
+	place-items: center;
+	min-height: 200px;
+	border: 8px solid;
+	padding: 1rem;
+}
+
+.smg-border-primary {
+	border-image: linear-gradient(45deg, $primary) 1;
+}
+
+.smg-border-primary-gradient {
+  border-image: linear-gradient(135deg, $primary, white) 1;
+}
+
+.smg-border-secondary {
+	border-image: linear-gradient(135deg, $secondary-5) 1;
+}
+.smg-border-secondary-gradient {
+	border-image: linear-gradient(135deg, $secondary-5, white) 1;
+}
+
+.pseudo-partial-border {
+  position: relative;
+  padding: 7px;
+  margin: 25px;
+  border: none;
+  text-align: center;
+}
+
+.pseudo-partial-border::before,
+.pseudo-partial-border::after {
+  position: absolute;
+  width: 33px;
+  height: 20px;
+  content: "";
+}
+
+.pseudo-partial-border::before {
+  left: 0;
+  top: 0;
+  border-left: 8px solid;
+  border-top: 8px solid;
+ }
+
+.pseudo-partial-border::after {
+  right: 0;
+  bottom: 0;
+  border-right: 8px solid;
+  border-bottom: 8px solid;
+ }
 
 table.text-primary th, table.text-primary td {
   color: $primary;
